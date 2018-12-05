@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  hello_world:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: hello_world_image
+    container_name: hello_world
+    ports:
+      - 8080:80
+    environment:
+      - RUNTIME_ENVIRONMENT=prod
